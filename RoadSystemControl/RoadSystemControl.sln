@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSystemControl.DAL", "Ro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSystemControl.BLL", "RoadSystemControl.BLL\RoadSystemControl.BLL.csproj", "{A24DE19C-99A4-425E-90BD-807E25E37448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoadSystemControl.Tools", "RoadSystemControl.Tools\RoadSystemControl.Tools.csproj", "{80F1B395-1568-4C2B-96BF-275E47AC9BC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{A24DE19C-99A4-425E-90BD-807E25E37448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24DE19C-99A4-425E-90BD-807E25E37448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24DE19C-99A4-425E-90BD-807E25E37448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80F1B395-1568-4C2B-96BF-275E47AC9BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80F1B395-1568-4C2B-96BF-275E47AC9BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80F1B395-1568-4C2B-96BF-275E47AC9BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80F1B395-1568-4C2B-96BF-275E47AC9BC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

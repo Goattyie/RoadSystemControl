@@ -7,12 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\RoadSystemControl.DAL\RoadSystemControl.DAL.csproj" />
-      <ProjectReference Include="..\RoadSystemControl.Domains\RoadSystemControl.Domains.csproj" />
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="11.0.1" />
+      <ProjectReference Include="..\RoadSystemControl.Domains\RoadSystemControl.Domains.csproj" />
     </ItemGroup>
 
 </Project>

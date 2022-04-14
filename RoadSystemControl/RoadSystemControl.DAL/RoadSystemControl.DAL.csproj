@@ -6,4 +6,9 @@
         <Nullable>disable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\RoadSystemControl.Database\RoadSystemControl.Database.csproj" />
+      <ProjectReference Include="..\RoadSystemControl.Domains\RoadSystemControl.Domains.csproj" />
+    </ItemGroup>
+
 </Project>
