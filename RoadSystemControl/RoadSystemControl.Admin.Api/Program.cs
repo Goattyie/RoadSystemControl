@@ -19,12 +19,14 @@ builder.Services.AddAutoMapper(typeof(DtoModelMappingConfig));
 #region Repositories
 
 builder.Services.AddScoped<ILocationRepository, LocationRepository>();
+builder.Services.AddScoped<IPositionRepository, PositionRepository>();
 
 #endregion
 
 #region Services
 
 builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<IPositionService, PositionService>();
 
 #endregion
 

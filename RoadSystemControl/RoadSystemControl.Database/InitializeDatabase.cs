@@ -28,5 +28,6 @@ public class InitializeDatabase
         dbContext.Database.Migrate();
         
         CreateLocations.Init(dbContext);
+        CreatePositions.Init(dbContext);
     }
 }

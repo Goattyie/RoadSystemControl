@@ -10,8 +10,20 @@ public class DtoModelMappingConfig : Profile
 {
     public DtoModelMappingConfig()
     {
+        #region Location
+
         CreateMap<LocationCreateDto, Location>();
         CreateMap<LocationGetDto, Location>().ReverseMap();
         CreateMap<LocationUpdateDto, Location>();
+
+        #endregion
+
+        #region Position
+
+        CreateMap<PositionCreateDto, Position>();
+        CreateMap<PositionGetDto, Position>().ReverseMap();
+        CreateMap<PositionUpdateDto, Position>();
+
+        #endregion
     }
 }

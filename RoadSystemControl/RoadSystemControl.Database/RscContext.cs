@@ -9,6 +9,7 @@ public class RscContext : DbContext
     public RscContext(DbContextOptions<RscContext> options) : base(options) { }
 
     public DbSet<Location> Locations { get; set; }
+    public DbSet<Position> Positions { get; set; }
     public DbSet<Police> Polices { get; set; }
     public DbSet<User> Users { get; set; }
 
@@ -17,6 +18,7 @@ public class RscContext : DbContext
         modelBuilder.ApplyConfiguration(new LocationConfiguration());
         modelBuilder.ApplyConfiguration(new PoliceConfiguration());
         modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new PositionConfiguration());
         
         base.OnModelCreating(modelBuilder);
     }
