@@ -11,6 +11,7 @@ public class UserConfiguration : AbstractConfiguration<User>, IEntityTypeConfigu
         BaseConfigure(builder);
 
         builder.Property(x => x.Login).IsRequired().HasMaxLength(20);
-        builder.Property(x => x.Password).IsRequired().HasMaxLength(40);
+        builder.Property(x => x.Password).IsRequired().HasMaxLength(100);
+        builder.Property(x => x.Role).IsRequired();
     }
 }

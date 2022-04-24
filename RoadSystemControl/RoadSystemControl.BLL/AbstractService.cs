@@ -57,7 +57,7 @@ public abstract class AbstractService <TCreateDto, TUpdateDto, TGetDto, TModel> 
 
     public async Task<IEnumerable<TGetDto>> RemoveRange(params int[] ids)
     {
-        var getEntitiesByIdQuery = Repository.GetQueryAsync().Where(x => ids.Contains(x.Id));
+        var getEntitiesByIdQuery = Repository.GetQuery().Where(x => ids.Contains(x.Id));
         var removedEntities = getEntitiesByIdQuery.ToArray();
         
         await Repository.RemoveRangeAsync(removedEntities);

@@ -38,5 +38,5 @@ public abstract class Repository<TModel> : IRepository<TModel> where TModel : Ba
 
     public async Task<IEnumerable<TModel>> GetAsync() => await _dbSet.AsNoTracking().ToListAsync();
 
-    public IQueryable<TModel> GetQueryAsync() => _dbSet.AsQueryable();
+    public IQueryable<TModel> GetQuery() => _dbSet.AsQueryable();
 }

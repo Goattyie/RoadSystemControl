@@ -9,5 +9,5 @@ public interface IRepository<TEntity> where  TEntity: BaseModel
     public Task RemoveRangeAsync(params TEntity[] entity);
     public Task<TEntity> FindByIdAsync(int id);
     public Task<IEnumerable<TEntity>> GetAsync();
-    public IQueryable<TEntity> GetQueryAsync();
+    public IQueryable<TEntity> GetQuery();
 }

@@ -1,10 +1,14 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RoadSystemControl.Admin.Api.Core;
 using RoadSystemControl.BLL.Interfaces;
 using RoadSystemControl.Domains.Dtos.Create;
 using RoadSystemControl.Domains.Dtos.Update;
+using RoadSystemControl.Domains.Enums;
 
 namespace RoadSystemControl.Admin.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class LocationsController : ControllerBase
@@ -33,6 +37,7 @@ public class LocationsController : ControllerBase
     }
     
     [HttpPost]
+    [AuthorizeRole(UserRole.Admin, UserRole.Operator)]
     public async Task<IActionResult> Post([FromBody] LocationCreateDto dto)
     {
         var createdDto = await _service.AddRangeAsync(dto);
@@ -41,6 +46,7 @@ public class LocationsController : ControllerBase
     }
 
     [HttpPut]
+    [AuthorizeRole(UserRole.Admin, UserRole.Operator)]
     public async Task<IActionResult> Put([FromBody] LocationUpdateDto dto)
     {
         var updatedDto = await _service.UpdateRangeAsync(dto);
@@ -49,6 +55,7 @@ public class LocationsController : ControllerBase
     }
 
     [HttpDelete]
+    [AuthorizeRole(UserRole.Admin)]
     public async Task<IActionResult> Delete(int id)
     {
         var deletedDto = await _service.RemoveRange(id);

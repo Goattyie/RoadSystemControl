@@ -29,5 +29,6 @@ public class InitializeDatabase
         
         CreateLocations.Init(dbContext);
         CreatePositions.Init(dbContext);
+        CreateUsers.Init(dbContext);
     }
 }
