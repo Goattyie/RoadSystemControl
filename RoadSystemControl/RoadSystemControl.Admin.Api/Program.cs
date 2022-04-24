@@ -1,3 +1,4 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +10,11 @@ using RoadSystemControl.BLL.Interfaces;
 using RoadSystemControl.DAL;
 using RoadSystemControl.DAL.Interfaces;
 using RoadSystemControl.Database;
+using RoadSystemControl.Domains.Dtos.Create;
+using RoadSystemControl.Domains.Dtos.Update;
 using RoadSystemControl.Tools.MappingConfiguration;
+using RoadSystemControl.Tools.Validators.Locations;
+using RoadSystemControl.Tools.Validators.Positions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -96,6 +101,16 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+#endregion
+
+#region Validators
+
+builder.Services.AddScoped<AbstractValidator<LocationCreateDto>, LocationCreateValidator>();
+builder.Services.AddScoped<AbstractValidator<LocationUpdateDto>, LocationUpdateValidator>();
+
+builder.Services.AddScoped<AbstractValidator<PositionCreateDto>, PositionCreateValidator>();
+builder.Services.AddScoped<AbstractValidator<PositionUpdateDto>, PositionUpdateValidator>();
 
 #endregion
 

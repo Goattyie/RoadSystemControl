@@ -5,11 +5,10 @@ using RoadSystemControl.Domains.Models;
 
 namespace RoadSystemControl.BLL.Interfaces;
 
-public interface IService<TCreateDto, TUpdateDto, TGetDto, TModel> 
+public interface IService<TCreateDto, TUpdateDto, TGetDto> 
     where TCreateDto : ICreateDto
     where TUpdateDto : IUpdateDto
     where TGetDto : IGetDto
-    where TModel : BaseModel
 {
     public Task<IEnumerable<TGetDto>> AddRangeAsync(params TCreateDto[] dtos);
     public Task<IEnumerable<TGetDto>> UpdateRangeAsync(params TUpdateDto[] dtos);

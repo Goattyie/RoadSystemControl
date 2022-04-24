@@ -5,7 +5,7 @@ using RoadSystemControl.Domains.Models;
 
 namespace RoadSystemControl.BLL.Interfaces;
 
-public interface IPositionService : IService<PositionCreateDto, PositionUpdateDto, PositionGetDto, Position>
+public interface IPositionService : IService<PositionCreateDto, PositionUpdateDto, PositionGetDto>
 {
     
 }

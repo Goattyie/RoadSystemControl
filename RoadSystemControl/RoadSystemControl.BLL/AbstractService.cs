@@ -8,7 +8,7 @@ using RoadSystemControl.Domains.Models;
 
 namespace RoadSystemControl.BLL;
 
-public abstract class AbstractService <TCreateDto, TUpdateDto, TGetDto, TModel> : IService<TCreateDto, TUpdateDto, TGetDto, TModel>
+public abstract class AbstractService <TCreateDto, TUpdateDto, TGetDto, TModel> : IService<TCreateDto, TUpdateDto, TGetDto>
     where TCreateDto : ICreateDto
     where TUpdateDto : IUpdateDto
     where TGetDto : IGetDto
